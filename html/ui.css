@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    user-select: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all .1s;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 950px;
+    height: 600px;
+    border-radius: .5rem;
+    border: 10px solid #FFFFFF;
+    background-color: #F3F3F3;
+    transform: translate(-50%,-50%);
+}
+
+.container #left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    display: flex;
+    font-size: 20px;
+    color: #D4D4D4;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+
+.container #left .icon {
+    margin-top: 30px;
+    margin-left: -10px;
+    max-height: 20px;
+    color: #000;
+}
+
+.container #left .icon:hover {
+    transform: scale(2);
+}
+
+.container #right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 85%;
+    height: 100%;
+    padding-right: 30px;
+}
+
+.container #right header {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.container #right header .title {
+    position: relative;
+    padding: 20px 30px; 
+    font-size: 12px;
+    color: #2C54D8;
+    display: inline-flex;
+    white-space: nowrap;
+}
+
+.container #right header .title #data {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    opacity: .3;
+    text-transform: uppercase;
+}
+
+.container #right header .title span {
+    color: #646568;
+}
+
+.container #right header .quick-actions {
+    width: 180px;
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 7px 15px;
+    text-align: center;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border: 1px solid rgba(170, 170, 170, 0.301);
+}
+
+.container #right header .quick-actions div {
+    color: #aaa;
+    margin-bottom: 7px;
+}
+
+.container #right header .quick-actions div:hover {
+    background-color: #2D55DB;
+    padding: 5px;
+    opacity: .4;
+    color: #fff;
+    text-transform: uppercase;
+    transform: skewX(-10deg);
+}
+
+.container #right header .quick-actions div:last-child {
+    margin: 0;
+}
+
+.container #right .title #line {
+    width: 1px;
+    height: 10px;
+    margin: 3px 10px;
+    background-color: #aaa;
+}
+
+.container #right header .account {
+    width: 100%;
+    padding: 10px 30px;
+}
+
+.container #right header .account .card-box {
+    display: inline-flex;
+}
+
+.container #right header .account .card {
+    position: relative;
+    width: 240px;
+    height: 140px;
+    color: #fff;
+    font-weight: 200;
+    margin-top: 20px;
+    padding: 10px 25px;
+    margin-right: 10px;
+    border-radius: .5rem;
+    background: linear-gradient(to right, #1D3A96, #274ABE, #2D55DB);
+}
+
+.container #right header .account .card:nth-child(2) {
+    color: #37383C;
+    background: linear-gradient(to right, #E8E8E8, #E8E8E8, #E8E8E8);
+}
+
+.container #right header .account .line {
+    width: 3px;
+    height: 160px;
+    margin: 0px 12px;
+    border-radius: .3rem;
+    background-color: #F6F6F6;
+}
+
+.container #right header .account .title-balance {
+    position: relative;
+    font-size: 13px;
+}
+
+.container #right header .account .title-balance span {
+    position: absolute;
+    top: 1px;
+    opacity: .4;
+    right: -5px;
+    font-size: 10px;
+}
+
+.container #right header .account .item-box h1 {
+    color: #2C54D8;
+    margin-bottom: -10px;
+}
+
+.container #right header .account .item-box small {
+    font-size: 10px;
+}
+
+.container #right header .account .card img {
+    max-height: 100px;
+}
+
+.container #right header .account .card #info {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    font-size: 17px;
+}
+
+.container #right header .account .card small {
+    position: absolute;
+    left: 25px;
+    bottom: 10px;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.container #right footer {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    font-size: 13px;
+    margin-top: 10px;
+    padding: 30px 30px;
+}
+
+.container #right footer .line {
+    width: 2px;
+    height: 200px;
+    margin: 0 20px;
+    border-radius: .4rem;
+    background-color: rgba(193, 197, 205, 0.315);
+}
+
+.container #right footer .item-info-box {
+    width: 470px;
+    height: 85%;
+    display: flex;
+    padding: 20px 0px;
+    margin-top: 10px;
+    border-radius: .4rem;
+}
+
+.container #right footer .item-extract-box {
+    position: absolute;
+    right: 40px;
+    height: 200px;
+    font-size: 12px;
+}
+
+.container #right footer .item-extract-box .itens {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: auto;
+    max-height: 300px;
+    flex-direction: column;
+}
+
+.container #right footer .item-extract-box .item {
+    position: relative;
+    width: 200px;
+    height: 60px;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    display: inline-flex;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.container #right footer .item-extract-box .item .item-text {
+    font-size: 10px;
+    margin-top: 5px;
+    line-height: 10px;
+}
+
+.container #right footer .item-extract-box .item .item-text-price {
+    position: absolute;
+    right: 0;
+    margin-top: 5px;
+    font-size: 10px;
+    text-align: right;
+    line-height: 10px;
+}
+
+.container #right footer .item-extract-box .item .item-text-price span {
+    color: #646568c4;
+    font-size: 8px;
+}
+
+.container #right footer .item-extract-box .item .item-text span {
+    color: #646568c4;
+    font-weight: 500;
+    font-size: 9px;
+}
+
+.container #right footer .item-extract-box .item .icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    font-size: 12px;
+    margin-right: 10px;
+    text-align: center;
+    align-items: center;
+    border-radius: .4rem;
+    justify-content: center;
+    color: #252525;
+    border: 1px dotted #6465684b;
+}
+
+.container #right footer .item-info-box .item {
+    width: 180px;
+    height: 100%;
+    font-size: 17px;
+    color: #FD7C7C;
+    line-height: 15px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px dashed rgba(55, 56, 60, 0.404);
+}
+
+.container #right footer .item-info-box .item-input {
+    position: relative;
+    padding-left: 20px;
+}
+
+.container #right footer .item-info-box .item-input p {
+    opacity: .5;
+    font-size: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.container #right footer .item-info-box .item-input input {
+    width: 100%;
+    height: 65px;
+    outline: none;
+    margin-top: 5px;
+    font-size: 20px;
+    color:  rgb(55, 101, 255);
+    padding-left: 10px;
+    border-radius: .5rem;
+    background-color: transparent;
+    border: 1px solid rgba(170, 170, 170, 0.651);
+}
+
+.container #right footer .item-info-box .item-input button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: .5;
+    outline: none;
+    font-size: 12px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-bottom-left-radius: .5rem;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid rgba(170, 170, 170, 0.651);
+}
+
+.container #right footer .item-info-box .item-input button:hover {
+    opacity: 1;
+    border: 0;
+    color: #fff;
+    background-color: rgb(55, 101, 255);
+}
+
+.container #right footer .item-info-box .item #line {
+    width: 100%;
+    height: 1px;
+    margin: 10px 0px;
+    background-color: rgba(170, 170, 170, 0.651);
+}
+
+.container #right footer .item-info-box .item label {
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #C1C5CD;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+  
+::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background: #666666; 
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="ui.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" style="display: none;">
+        <section id="left">
+            <img src="https://cdn.discordapp.com/attachments/930593137590685796/932745623520837632/deposit.png" class="icon" data-display="saque" onclick="up(this)">
+          <!--   <i class="fas fa-barcode icon" data-display="boleto" onclick="up(this)"></i> -->
+            <img src="https://cdn.discordapp.com/attachments/536772140721111049/712107724493553695/1642096.png" class="icon" data-display="multa" onclick="up(this)">
+            <img src="https://st3.depositphotos.com/1432405/31816/v/450/depositphotos_318162996-stock-illustration-wallet-and-coins-icon-outline.jpg" class="icon" data-display="depositar" onclick="up(this)">
+        </section>
+        <section id="right">
+            <header>
+                <div class="title">
+                    <small>Banco</small> <div id="line"></div> <small><span>olá <span class="identidade"></span>, bem vindo</span></small>
+                    <span id="data">25:15 05 / 15 april</span>
+                </div>
+                <div class="account">
+                    <p>Seus Cartões</p>
+                    <div class="card-box">
+                        <div class="card">
+                            <img src="assets/test.svg">
+                            <span id="info">$ <span class="currentBalance">0</span></span>
+                            <small>Saldo bancario</small>
+                        </div>
+                        <div class="card">
+                            <img src="assets/black-visa.svg">
+                            <span id="info">$ <span class="carteira">0</span></span>
+                            <small>Saldo em mãos</small>
+                        </div>
+                        <div class="line"></div>
+                        <div class="item-box">
+                            <div class="title-balance">
+                                <p>Salario <span>ultimo calculo</span></p>
+                            </div>
+                            <h1>$ <span id="salario">0</span></h1>
+                            <small>Salario atual</small>
+                            <div class="quick-actions">
+                                <div id="SaqueRapido"><span>Saque rapido</span></div>
+                                <div id="fastCash"><span>Deposito rapido</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <footer>
+                <div class="up-box item-box" id="multa">
+                    <p>Pagar Multas</p>
+                    <div class="item-info-box">
+                        <div class="item">
+                            <label>Saldo</label><br>
+                            <small style="color: #92DBAC;">$ <span class="currentBalance">0</span></small>
+                            <div id="line"></div>
+                            <label>Multas Pendentes</label><br>
+                            <small class="multas">$ 0</small>
+                        </div>
+                        <div class="item-input">
+                            <p>Insira o valor que deseja pagar !</p>
+                            <form class="input-modal" id="multas">
+                                <input id="amount" placeholder="$ 100,00">
+                                <button>Pagar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+     <!--           <div class="up-box item-box" id="boleto" style="display: none;">
+                    <p>Pagar Boletos</p>
+                    <div class="item-info-box">
+                        <div class="item">
+                            <label>Saldo</label><br>
+                            <small style="color: #92DBAC;">$ <span class="currentBalance">0</span></small>
+                            <div id="line"></div>
+                            <label>Pendente</label><br>
+                            <small>$ 0</small>
+                        </div>
+                        <div class="item-input">
+                            <p>Insira o valor que deseja pagar !</p>
+                            <form>
+                                <input>
+                                <button>Pagar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="up-box item-box" id="saque" style="display: none;">
+                    <p id="title-up">Sacar Dinheiro</p>
+                    <div class="item-info-box">
+                        <div class="item">
+                            <label>Saldo</label><br>
+                            <small style="color: #92DBAC;">$ <span class="currentBalance">0</span></small>
+                            <div id="line"></div>
+                            <label>Pendente</label><br>
+                            <small>$ 0</small>
+                        </div>
+                        <div class="item-input">
+                            <p>Insira o valor que deseja pagar !</p>
+                            <form class="input-modal" id="saque">
+                                <input id="amount" placeholder="$ 100,00">
+                                <button>Sacar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="up-box item-box" id="depositar" style="display: none;">
+                    <p id="title-up">Depositar Dinheiro</p>
+                    <div class="item-info-box">
+                        <div class="item">
+                            <label>Saldo</label><br>
+                            <small style="color: #92DBAC;">$ <span class="currentBalance">0</span></small>
+                            <div id="line"></div>
+                            <label>Pendente</label><br>
+                            <small>$ 0</small>
+                        </div>
+                        <div class="item-input">
+                            <p>Insira o valor que deseja pagar !</p>
+                            <form class="input-modal" id="depositar">
+                                <input id="amount" placeholder="$ 100,00">
+                                <button>Depositar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="item-extract-box">
+                    <p>Ultimas Transições</p>
+
+                    <div class="itens" id="extrato">
+
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="ui.js"></script>
+    <script src="font.js"></script>
+    <script>
+        function up(element) {
+            $('.up-box').hide();
+            $('#' + element.dataset.display).fadeIn();
+        }
+    </script>
+</body>
+
+</html>
